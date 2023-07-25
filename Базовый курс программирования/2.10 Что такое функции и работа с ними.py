@@ -67,7 +67,7 @@
 
 # функция приветствия c return
 name = "Alex"
-age = "38"
+age = "32"
 def hi(name, age):
     result = name + " " + age
     # return возвращает результат
