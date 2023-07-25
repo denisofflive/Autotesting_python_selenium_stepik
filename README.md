@@ -1,1 +1,2 @@
-# Autotesting_python_selenium_stepik
+# Тестирование ПО:Автоматизация и Программирование.Python.Selenium
+https://stepik.org/course/120491
