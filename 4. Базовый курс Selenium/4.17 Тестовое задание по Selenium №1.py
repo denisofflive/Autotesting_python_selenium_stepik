@@ -158,7 +158,7 @@ print('Финальная цена продукта 2: ' + str(value_overview_pr
 assert value_price_product_2 == value_overview_price_product_2
 print('OK, финальная цена продукта корректна')
 
-"""Отделить $ от итоговой сумму"""
+"""Отделить $ от итоговой суммы"""
 total_sum = driver.find_element(By.CSS_SELECTOR, ".summary_subtotal_label")
 value_total_sum = str(total_sum.text).replace('Item total: $', '')
 print('Общая сумма равна:  ' + value_total_sum)
