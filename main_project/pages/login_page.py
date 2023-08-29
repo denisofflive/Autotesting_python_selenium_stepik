@@ -39,11 +39,11 @@ class Login_page(Base):
 
     def input_user_name(self, user_name):
         self.get_user_name().send_keys(user_name)
-        print("Input user name")
+        print("Input User Name")
 
     def input_password(self, password):
         self.get_password().send_keys(password)
-        print("Input password")
+        print("Input Password")
 
     def click_login_button(self):
         self.get_login_button().click()

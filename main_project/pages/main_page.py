@@ -30,11 +30,11 @@ class Main_page(Base):
 
     def click_select_product_1(self):
         self.get_select_product_1().click()
-        print("Click select product 1")
+        print("Click Select Product 1")
 
     def click_cart(self):
         self.get_cart().click()
-        print("Click cart")
+        print("Click Cart")
 
     # Methods - наши методы (шаги)
 

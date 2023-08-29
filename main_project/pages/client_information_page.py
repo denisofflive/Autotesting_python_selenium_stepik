@@ -39,15 +39,15 @@ class Client_inforamtion_page(Base):
 
     def input_first_name(self, first_name):
         self.get_first_name().send_keys(first_name)
-        print("Input first name")
+        print("Input First Name")
 
     def input_last_name(self, last_name):
         self.get_last_name().send_keys(last_name)
-        print("Input last name")
+        print("Input Last name")
 
     def input_postal_code(self, postal_code):
         self.get_postal_code().send_keys(postal_code)
-        print("Input last name")
+        print("Input Postal Code")
 
     def click_continue_button(self):
         self.get_continue_button().click()
