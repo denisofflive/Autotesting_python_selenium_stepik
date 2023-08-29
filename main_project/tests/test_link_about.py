@@ -5,7 +5,7 @@ from main_project.pages.login_page import Login_page
 from main_project.pages.main_page import Main_page
 
 
-def test_link_about():
+def test_link_about(set_up):
     options = webdriver.ChromeOptions()
     options.add_experimental_option("detach", True)
     g = Service()
