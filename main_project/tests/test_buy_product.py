@@ -9,8 +9,8 @@ from main_project.pages.login_page import Login_page
 from main_project.pages.main_page import Main_page
 from main_project.pages.payment_page import Payment_page
 
-@pytest.mark.run(order=2)
-def test_buy_product_1():
+# @pytest.mark.run(order=2)
+def test_buy_product_1(set_up):
     options = webdriver.ChromeOptions()
     options.add_experimental_option("detach", True)
     g = Service()
@@ -27,20 +27,20 @@ def test_buy_product_1():
     cp = Cart_page(driver)
     cp.click_checkout_button()
 
-    # cip = Client_inforamtion_page(driver)
-    # cip.input_information()
-    #
-    # p = Payment_page(driver)
-    # p.click_finish_button()
-    #
-    # f = Finish_page(driver)
-    # f.finish()
+    cip = Client_inforamtion_page(driver)
+    cip.input_information()
+
+    p = Payment_page(driver)
+    p.click_finish_button()
+
+    f = Finish_page(driver)
+    f.finish()
 
     print('Finish Test 1')
     time.sleep(1)
     driver.close()
-@pytest.mark.run(order=3)
-def test_buy_product_2():
+# @pytest.mark.run(order=3)
+def test_buy_product_2(set_up):
     options = webdriver.ChromeOptions()
     options.add_experimental_option("detach", True)
     g = Service()
@@ -60,8 +60,8 @@ def test_buy_product_2():
     print('Finish Test 2')
     time.sleep(1)
     driver.close()
-@pytest.mark.run(order=1)
-def test_buy_product_3():
+# @pytest.mark.run(order=1)
+def test_buy_product_3(set_up):
     options = webdriver.ChromeOptions()
     options.add_experimental_option("detach", True)
     g = Service()
