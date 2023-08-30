@@ -1,7 +1,7 @@
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-
+import allure
 from main_project.base.base_class import Base
 from main_project.utils.logger import Logger
 
@@ -34,8 +34,9 @@ class Payment_page(Base):
 
 
     def payment(self):
-        Logger.add_start_step(method="payment")
-        self.get_current_url()
-        self.click_finish_button()
-        Logger.add_end_step(url=self.driver.current_url, method="payment")
+        with allure.step("Payment"):
+            Logger.add_start_step(method="payment")
+            self.get_current_url()
+            self.click_finish_button()
+            Logger.add_end_step(url=self.driver.current_url, method="payment")
 

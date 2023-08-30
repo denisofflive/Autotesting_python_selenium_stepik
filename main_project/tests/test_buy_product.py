@@ -1,5 +1,6 @@
 import time
 import pytest
+import allure
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from main_project.pages.cart_page import Cart_page
@@ -11,6 +12,7 @@ from main_project.pages.payment_page import Payment_page
 
 
 # @pytest.mark.run(order=2)
+@allure.description("Test Buy Product 1")
 def test_buy_product_1(set_up, set_group):
     options = webdriver.ChromeOptions()
     options.add_experimental_option("detach", True)

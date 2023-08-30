@@ -1,7 +1,7 @@
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-
+import allure
 from main_project.base.base_class import Base
 from main_project.utils.logger import Logger
 
@@ -58,13 +58,14 @@ class Client_inforamtion_page(Base):
 
 
     def input_information(self):
-        Logger.add_start_step(method="input_information")
-        self.get_current_url()
-        self.input_first_name("Denis")
-        self.input_last_name("Denisov")
-        self.input_postal_code("1234")
-        self.click_continue_button()
-        Logger.add_end_step(url=self.driver.current_url, method="input_information")
+        with allure.step("Input Information"):
+            Logger.add_start_step(method="input_information")
+            self.get_current_url()
+            self.input_first_name("Denis")
+            self.input_last_name("Denisov")
+            self.input_postal_code("1234")
+            self.click_continue_button()
+            Logger.add_end_step(url=self.driver.current_url, method="input_information")
 
 
 
