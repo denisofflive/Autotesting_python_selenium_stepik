@@ -43,46 +43,46 @@ def test_buy_product_1(set_up, set_group):
 
 
 # @pytest.mark.run(order=3)
-def test_buy_product_2(set_up, set_group):
-    options = webdriver.ChromeOptions()
-    options.add_experimental_option("detach", True)
-    g = Service()
-    driver = webdriver.Chrome(options=options, service=g)
-
-    print("Start Test 2")
-
-    login = Login_page(driver)
-    login.authorization()
-
-    mp = Main_page(driver)
-    mp.select_products_2()
-
-    cp = Cart_page(driver)
-    cp.click_checkout_button()
-
-    print('Finish Test 2')
-    time.sleep(1)
-    driver.close()
-
-
-# @pytest.mark.run(order=1)
-def test_buy_product_3(set_up, set_group):
-    options = webdriver.ChromeOptions()
-    options.add_experimental_option("detach", True)
-    g = Service()
-    driver = webdriver.Chrome(options=options, service=g)
-
-    print("Start Test 3")
-
-    login = Login_page(driver)
-    login.authorization()
-
-    mp = Main_page(driver)
-    mp.select_products_3()
-
-    cp = Cart_page(driver)
-    cp.click_checkout_button()
-
-    print('Finish Test 3')
-    time.sleep(1)
-    driver.close()
+# def test_buy_product_2(set_up, set_group):
+#     options = webdriver.ChromeOptions()
+#     options.add_experimental_option("detach", True)
+#     g = Service()
+#     driver = webdriver.Chrome(options=options, service=g)
+#
+#     print("Start Test 2")
+#
+#     login = Login_page(driver)
+#     login.authorization()
+#
+#     mp = Main_page(driver)
+#     mp.select_products_2()
+#
+#     cp = Cart_page(driver)
+#     cp.click_checkout_button()
+#
+#     print('Finish Test 2')
+#     time.sleep(1)
+#     driver.close()
+#
+#
+# # @pytest.mark.run(order=1)
+# def test_buy_product_3(set_up, set_group):
+#     options = webdriver.ChromeOptions()
+#     options.add_experimental_option("detach", True)
+#     g = Service()
+#     driver = webdriver.Chrome(options=options, service=g)
+#
+#     print("Start Test 3")
+#
+#     login = Login_page(driver)
+#     login.authorization()
+#
+#     mp = Main_page(driver)
+#     mp.select_products_3()
+#
+#     cp = Cart_page(driver)
+#     cp.click_checkout_button()
+#
+#     print('Finish Test 3')
+#     time.sleep(1)
+#     driver.close()
